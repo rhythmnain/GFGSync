@@ -1,0 +1,41 @@
+# Node.js Dependencies
+node_modules/
+package-lock.json
+
+# Environment Variables
+.env
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VS Code settings
+.vscode/
+
+# Build and Cache
+dist/
+build/
+tmp/
+.cache/
+
+# Git and OS Specific Files
+.DS_Store
+Thumbs.db
+
+# Chrome Extension Artifacts
+*.crx
+*.pem
+
+# Debugging & Coverage
+coverage/
+*.map
+
+# Ignore compiled JavaScript files if using TypeScript
+*.tsbuildinfo
+
+# Ignore GitHub or GFG API tokens if any
+config/github.js
+config/gfg.js
