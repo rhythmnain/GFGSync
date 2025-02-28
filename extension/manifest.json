@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "GFGSync - GeeksforGeeks to GitHub Sync",
+  "version": "1.0",
+  "description": "Automatically sync GFG problem submissions to a GitHub repository.",
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting",
+    "identity",
+    "identity.email"
+  ],
+  "host_permissions": [
+    "https://auth.geeksforgeeks.org/*",
+    "https://www.geeksforgeeks.org/*",
+    "https://api.github.com/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://www.geeksforgeeks.org/*"],
+      "js": ["content.js"]
+    }
+  ]
+}
